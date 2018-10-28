@@ -1,0 +1,66 @@
+Microsoft Windows [Version 10.0.17134.345]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+D:\work\sfdx>
+D:\work\sfdx>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\work\sfdx>dir
+ Volume in drive D is 128gaug2018
+ Volume Serial Number is D854-3348
+
+ Directory of D:\work\sfdx
+
+2018/10/26  05:57    <DIR>          .
+2018/10/26  05:57    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  115,442,974,720 bytes free
+
+D:\work\sfdx>sfdx update
+ !    Attempting to contact update site...
+ !    S3 host is not reachable.
+
+D:\work\sfdx>sfdx update
+ !    Attempting to contact update site...
+ !    S3 host is not reachable.
+
+D:\work\sfdx>sfdx update
+ !    Attempting to contact update site...
+ !    S3 host is not reachable.
+
+D:\work\sfdx>dir
+ Volume in drive D is 128gaug2018
+ Volume Serial Number is D854-3348
+
+ Directory of D:\work\sfdx
+
+2018/10/26  05:57    <DIR>          .
+2018/10/26  05:57    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  115,442,843,648 bytes free
+
+D:\work\sfdx>sfdx force:project:create --projectname lextrail1 --manifest
+target dir = D:\work\sfdx
+   create lextrail1\sfdx-project.json
+   create lextrail1\README.md
+   create lextrail1\.forceignore
+   create lextrail1\config\project-scratch-def.json
+   create lextrail1\manifest\package.xml
+
+
+D:\work\sfdx>
+Starting SFDX: Authorize an Org
+
+sfdx force:auth:web:login --setalias lextrail6 --setdefaultusername
+Successfully authorized nobukazu.tanaka@brave-bear-p1m1z8.com with org ID 00D1000000022pnEAA
+You may now close the browser
+sfdx force:auth:web:login --setalias lextrail6 --setdefaultusername ended with exit code 0
+
+Starting SFDX: Retrieve Source from Org
+
+sfdx force:source:retrieve --manifest d:\work\sfdx\lextrail1\manifest\package.xml
+=== Retrieved Source
+No results found
+sfdx force:source:retrieve --manifest d:\work\sfdx\lextrail1\manifest\package.xml ended with exit code 0
+
